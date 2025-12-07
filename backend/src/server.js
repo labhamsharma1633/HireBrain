@@ -50,6 +50,9 @@ app.use("/api/sessions", sessionRoutes);
 app.get("/health", (req, res) => {
   res.status(200).json({ msg: "api is up and running" });
 });
+app.get("/", (req, res) => {
+  res.status(200).json({ msg: "TalentIQ backend root — use /api endpoints" });
+});
 
 // ✅ Serve frontend in production
 if (ENV.NODE_ENV === "production") {
